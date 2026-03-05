@@ -16,7 +16,7 @@ function Updateuserprofile() {
     });
 
     const [preview, setPreview] = useState(
-        storedUser.image ? `http://localhost:8000/uploads/${storedUser.image}` : null
+        storedUser.image ? `https://backend-taskmanagement-erlm.onrender.com/uploads/${storedUser.image}` : null
     );
 
     const handleChange = (e) => {
@@ -36,7 +36,7 @@ function Updateuserprofile() {
         formData.append("mobile", userdata.mobile);
         if (userdata.image) formData.append("image", userdata.image);
         try {
-            let res = await axios.put(`http://localhost:8000/api/updateuser/${storedUser._id}`,
+            let res = await axios.put(`https://backend-taskmanagement-erlm.onrender.com/api/updateuser/${storedUser._id}`,
                 formData, { withCredentials: true, headers: { Authorization: `Bearer ${token}` } })
             alert(res.data.message)
             let user = res.data.user

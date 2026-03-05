@@ -21,7 +21,7 @@ function Updatetask() {
     const getTaskById = async () => {
         try {
             const res = await axios.get(
-                `http://localhost:8000/api/gettask/${id}`,
+                `https://backend-taskmanagement-erlm.onrender.com/api/gettask/${id}`,
                 {
                     headers: {
                         Authorization: "Bearer " + token
@@ -67,7 +67,7 @@ function Updatetask() {
 
         try {
             const res = await axios.put(
-                `http://localhost:8000/api/updatetask/${id}`,
+                `https://backend-taskmanagement-erlm.onrender.com/api/updatetask/${id}`,
                 task,
                 {
                     headers: {

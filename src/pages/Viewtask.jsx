@@ -8,7 +8,7 @@ function Viewasks() {
     let navigate = useNavigate()
 
     let getTasks = async () => {
-        let res = await axios.get("http://localhost:8000/api/gettasks", {
+        let res = await axios.get("https://backend-taskmanagement-erlm.onrender.com/api/gettasks", {
             withCredentials: true,
             headers: {
                 Authorization: "Bearer " + token
@@ -22,7 +22,7 @@ function Viewasks() {
     }, [])
 
     let HandleDelete = async (id) => {
-        let res = await axios.delete(`http://localhost:8000/api/deletetask/${id}`, {
+        let res = await axios.delete(`https://backend-taskmanagement-erlm.onrender.com/api/deletetask/${id}`, {
             withCredentials: true,
             headers: {
                 Authorization: "Bearer " + token

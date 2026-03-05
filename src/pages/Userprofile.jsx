@@ -21,7 +21,7 @@ function Userprofile({ }) {
                             <div className="mb-3">
                                 {user.image ? (
                                     <img
-                                        src={user.image ? `http://localhost:8000/uploads/${user.image}` : null}
+                                        src={user.image ? `https://backend-taskmanagement-erlm.onrender.com/uploads/${user.image}` : null}
                                         alt="Profile"
                                         className="rounded-circle img-thumbnail"
                                         style={{ width: "150px", height: "150px", objectFit: "cover" }}
