@@ -106,7 +106,10 @@ function App() {
             </ProtectedRoutes>
           )
         },
-        { path: "/logout", element: <Navigate to="/login" replace /> },
+        { 
+          path: "/logout",
+          element: <Navigate to="/login" replace /> 
+        },
         {
           path: "*",
           element: <Pagenotfound />
